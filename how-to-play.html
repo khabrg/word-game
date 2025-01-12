@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كيفية اللعب - خمسة حروف</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .instruction-box {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .example {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .example-cell {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .correct { background: #4caf50; color: white; }
+        .wrong-position { background: #ffd700; }
+        .incorrect { background: #e0e0e0; }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #e53935;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a href="index.html" class="back-button">عودة للعبة</a>
+        
+        <h1>كيفية اللعب خمسة حروف</h1>
+        
+        <div class="instruction-box">
+            <h2>قواعد اللعبة</h2>
+            <ul>
+                <li>عليك تخمين الكلمة المكونة من خمسة حروف في 6 محاولات أو أقل</li>
+                <li>كل محاولة يجب أن تكون كلمة عربية صحيحة مكونة من 5 حروف</li>
+                <li>بعد كل محاولة، سيتغير لون الحروف ليدلك على مدى صحة تخمينك</li>
+            </ul>
+        </div>
+
+        <h2>معنى الألوان</h2>
+        <div class="instruction-box">
+            <div class="example">
+                <div class="example-cell correct">ك</div>
+                <div class="example-cell">ت</div>
+                <div class="example-cell">ا</div>
+                <div class="example-cell">ب</div>
+                <div class="example-cell">ة</div>
+            </div>
+            <p>اللون الأخضر يعني أن الحرف صحيح وفي المكان الصحيح</p>
+
+            <div class="example">
+                <div class="example-cell">س</div>
+                <div class="example-cell wrong-position">ل</div>
+                <div class="example-cell">ا</div>
+                <div class="example-cell">م</div>
+                <div class="example-cell">ة</div>
+            </div>
+            <p>اللون الأصفر يعني أن الحرف موجود في الكلمة ولكن في مكان خاطئ</p>
+
+            <div class="example">
+                <div class="example-cell">ق</div>
+                <div class="example-cell incorrect">ط</div>
+                <div class="example-cell">ا</div>
+                <div class="example-cell">ر</div>
+                <div class="example-cell">ة</div>
+            </div>
+            <p>اللون الرمادي يعني أن الحرف غير موجود في الكلمة</p>
+        </div>
+
+        <h2>نصائح للعب</h2>
+        <div class="instruction-box">
+            <ul>
+                <li>ابدأ بكلمات تحتوي على حروف شائعة مثل (ا، ل، م، ن، ر)</li>
+                <li>استخدم المعلومات من المحاولات السابقة لتحسين تخمينك</li>
+                <li>انتبه للحروف ذات اللون الأصفر - فهي مفتاح الحل!</li>
+                <li>لا تكرر نفس الكلمة مرتين</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-button">ابدأ اللعب!</a>
+    </div>
+</body>
+</html>

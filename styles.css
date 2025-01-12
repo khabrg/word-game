@@ -1,0 +1,374 @@
+/* متغيرات الألوان */
+:root {
+  --primary-color: #1D3557;
+  --secondary-color: #457B9D;
+  --accent-color: #E63946;
+  --background-color: #ffffff;
+  --light-color: #A8DADC;
+  --text-color: #1D3557;
+  --text-light: #A8DADC;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  direction: rtl;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.red-text {
+  color: #e53935;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: "Traditional Arabic", "Arial", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: -15px;
+}
+
+.blue-text {
+  color: #2196f3;
+  font-size: 3.5em;
+  font-weight: bold;
+  font-family: "Traditional Arabic", "Arial", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.title-container .red-text {
+  font-size: 3em;
+  color: #e53935;
+  font-weight: bold;
+}
+
+.title-container .blue-text {
+  font-size: 2.5em;
+  color: #2196f3;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.game-options {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+#new-game {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-weight: bold;
+}
+
+#game-board {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin: 40px auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.game-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.game-cell {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.game-cell.filled {
+  border-color: #6200ea;
+  background-color: #f5f5f5;
+  transform: scale(1.02);
+}
+
+.game-cell.correct {
+  background-color: #4caf50;
+  border-color: #45a049;
+  color: white;
+  transform: scale(1.05);
+}
+
+.game-cell.present {
+  background-color: #ffeb3b;
+  border-color: #fdd835;
+  color: black;
+  transform: scale(1.05);
+}
+
+.game-cell.absent {
+  background-color: #e0e0e0;
+  border-color: #bdbdbd;
+  color: black;
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  .game-cell {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    border-width: 2px;
+  }
+  
+  .game-row {
+    gap: 8px;
+  }
+  
+  #game-board {
+    gap: 8px;
+    padding: 10px;
+    margin: 20px auto;
+  }
+}
+
+#keyboard {
+  margin-top: auto;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.key {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  min-width: 40px;
+  font-weight: bold;
+}
+
+#enter-key {
+  background-color: #f0f0f0;
+  padding: 15px 25px;
+}
+
+#message {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.2em;
+  min-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .title-container .red-text {
+    font-size: 2em;
+  }
+  
+  .title-container .blue-text {
+    font-size: 1.6em;
+  }
+  
+  .key {
+    padding: 10px;
+    min-width: 30px;
+    font-size: 1em;
+  }
+  
+  .logo {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .red-text {
+    font-size: 3em;
+    margin-bottom: -10px;
+  }
+
+  .blue-text {
+    font-size: 2.5em;
+  }
+}
+
+.new-game-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border-radius: 25px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.new-game-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+.score-display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 400px;
+  font-size: 1.2em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.score-display div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.game-result {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.game-result h3 {
+  color: #4caf50;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.game-result p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.game-result button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.game-result button:hover {
+  background-color: #1976d2;
+}
+
+.ad-container,
+.ad-label,
+.top-ad,
+.side-ad,
+.interstitial-ad,
+.ad-overlay {
+  display: none;
+}
+
+/* تحريكات */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.pop {
+  animation: pop 0.3s ease;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+  
+  .key {
+    padding: 10px;
+    min-width: 30px;
+    font-size: 1em;
+  }
+  
+  h1 {
+    font-size: 2.2em;
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خمسة حروف</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="theme-color" content="#e53935">
+    <style>
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0;
+        }
+        .nav-links a {
+            color: #e53935;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #ffebee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <div class="title-container">
+                <span class="red-text">خمسة</span>
+                <span class="blue-text">حروف</span>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="how-to-play.html">كيفية اللعب</a>
+            <a href="about.html">عن اللعبة</a>
+        </div>
+
+        <button class="new-game-button" id="newGameButton">لعبة جديدة</button>
+        
+        <div id="game-board"></div>
+        
+        <div id="message"></div>
+
+        <div id="keyboard">
+            <div class="keyboard-row">
+                <button class="key" data-key="ض">ض</button>
+                <button class="key" data-key="ص">ص</button>
+                <button class="key" data-key="ث">ث</button>
+                <button class="key" data-key="ق">ق</button>
+                <button class="key" data-key="ف">ف</button>
+                <button class="key" data-key="غ">غ</button>
+                <button class="key" data-key="ع">ع</button>
+                <button class="key" data-key="ه">ه</button>
+                <button class="key" data-key="خ">خ</button>
+                <button class="key" data-key="ح">ح</button>
+                <button class="key" data-key="ج">ج</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key" data-key="ش">ش</button>
+                <button class="key" data-key="س">س</button>
+                <button class="key" data-key="ي">ي</button>
+                <button class="key" data-key="ب">ب</button>
+                <button class="key" data-key="ل">ل</button>
+                <button class="key" data-key="ا">ا</button>
+                <button class="key" data-key="ت">ت</button>
+                <button class="key" data-key="ن">ن</button>
+                <button class="key" data-key="م">م</button>
+                <button class="key" data-key="ك">ك</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key" data-key="Enter" id="enter-key">إدخال</button>
+                <button class="key" data-key="ط">ط</button>
+                <button class="key" data-key="ئ">ئ</button>
+                <button class="key" data-key="ء">ء</button>
+                <button class="key" data-key="ؤ">ؤ</button>
+                <button class="key" data-key="ر">ر</button>
+                <button class="key" data-key="لا">لا</button>
+                <button class="key" data-key="ى">ى</button>
+                <button class="key" data-key="ة">ة</button>
+                <button class="key" data-key="و">و</button>
+                <button class="key" data-key="ز">ز</button>
+                <button class="key" data-key="ظ">ظ</button>
+                <button class="key" data-key="Backspace" id="backspace-key">⌫</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer style="text-align: center; margin-top: 20px;">
+        <a href="privacy.html" style="color: #666; text-decoration: none; margin: 0 10px;">سياسة الخصوصية</a>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
